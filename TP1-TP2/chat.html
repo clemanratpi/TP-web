@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Chat en ligne</h1>
+
+    <nav>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li class="active"><a href="authentification.html">Chat</a></li>
+        <li>
+          <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">
+            <img src="images/isen.png" alt="Logo ISEN" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="chat-box">
+    <h2>Chat</h2>
+
+    <form action="#" method="get">
+      <div class="chat-grid">
+        <div>
+          <label for="canal">Canal</label><br>
+          <select id="canal" name="canal">
+            <option value="general">Général</option>
+            <option value="cours">Cours</option>
+            <option value="projets">Projets</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="refresh">Rafraîchissement (s)</label><br>
+          <input id="refresh" name="refresh" type="number" min="1" value="5">
+        </div>
+
+        <div class="full">
+          <label for="historique">Historique</label><br>
+          <textarea id="historique" cols="100" rows="10" readonly>
+          </textarea>
+        </div>
+
+        <div class="full">
+          <label for="message">Message</label><br>
+          <input id="message" name="message" type="text" required>
+        </div>
+
+        <div class="full">
+          <button type="submit">Envoyer</button>
+          <button type="reset">Effacer</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; ISEN Yncréa Ouest</p>
+    <p>
+      <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">Lien vers la page du Programmeur</a>
+    </p>
+  </footer>
+</body>
+</html>
