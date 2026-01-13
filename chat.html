@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Chat</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
 
+  <!-- Police Marko One -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Chat en ligne</h1>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="authentification.html">Chat</a></li>
-                <li><a href="https://www.isen-ouest.yncrea.fr/" target="_blank"><img src="images/logo-isen.png" alt="Logo ISEN" width="150"></a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Chat en ligne</h1>
 
-    <section>
-        <h2>Chat</h2>
+    <nav>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li class="active"><a href="authentification.html">Chat</a></li>
+        <li>
+          <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">
+            <img src="images/isen.png" alt="Logo ISEN" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-        <form method="post">
-            <p>
-                <label for="canaux">Canaux: </label>
-                <select id="canaux" name="canaux">
-                    <option value="">--Choisissez un canal--</option>
-                    <option value="general">Général</option>
-                    <option value="technique">Technique</option>
-                    <option value="detente">Détente</option>
-                </select>
-                <label for="rafraichissement">Rafraîchissement : </label>
-                <input type="text" id="rafraichissement" name="rafraichissement" placeholder="Entrez le délai de rafraîchis">
-                <span>secondes</span>
-            </p>
-            <hr>
-            <p>
-                <textarea cols="100" rows="10" readonly></textarea>
-            </p>
-            <hr>
-            <p>
-                <label for="message">Message &gt; : </label>
-                <input type="text" id="message" name="message" placeholder="Entrez votre message" required>
-            </p>
-            <p>
-                <input type="button" value="Se déconnecter" onclick="window.location.href='authentification.html'">
-                <input type="submit" value="Envoyer">
-            </p>
-        </form>
-    </section>
+  <section class="chat-box">
+    <h2>Chat</h2>
 
-    <footer>
-        <p>All content copyright &copy; CIPA4.</p>
-        <p><a href="https://www.isen-ouest.yncrea.fr/" target="_blank">Lien vers la page du Programmeur</a></p>
-    </footer>
+    <form action="#" method="get">
+      <div class="chat-grid">
+        <div>
+          <label for="canal">Canal</label><br>
+          <select id="canal" name="canal">
+            <option value="general">Général</option>
+            <option value="cours">Cours</option>
+            <option value="projets">Projets</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="refresh">Rafraîchissement (s)</label><br>
+          <input id="refresh" name="refresh" type="number" min="1" value="5">
+        </div>
+
+        <div class="full">
+          <label for="historique">Historique</label><br>
+          <textarea id="historique" cols="100" rows="10" readonly>
+[10:12] Alice : Salut !
+[10:13] Bob : Yo :)
+          </textarea>
+        </div>
+
+        <div class="full">
+          <label for="message">Message</label><br>
+          <input id="message" name="message" type="text" required>
+        </div>
+
+        <div class="full">
+          <button type="submit">Envoyer</button>
+          <button type="reset">Effacer</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; ISEN Yncréa Ouest</p>
+    <p>
+      <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">Lien vers la page du Programmeur</a>
+    </p>
+  </footer>
 </body>
 </html>

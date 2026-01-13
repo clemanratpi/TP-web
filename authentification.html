@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Chat</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
 
+  <!-- Police Marko One -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Chat en ligne</h1>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="authentification.html">Chat</a></li>
-                <li><a href="https://www.isen-ouest.yncrea.fr/" target="_blank"><img src="images/logo-isen.png" alt="Logo ISEN" width="150"></a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Chat en ligne</h1>
 
-    <section>
-        <h2>Authentification</h2>
+    <nav>
+      <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li class="active"><a href="authentification.html">Chat</a></li>
+        <li>
+          <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">
+            <img src="images/isen.png" alt="Logo ISEN" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-        <form method="get" action="chat.html">
-            <p>
-                <label for="login">Login : </label>
-                <input type="text" id="login" name="login" placeholder="Entrez votre login" required>
-            </p>
-            <p>
-                <label for="password">Mot de passe : </label>
-                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
-            </p>
-            <p>
-                <input type="submit" value="Se connecter">
-                <input type="reset" value="Effacer">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Rester connecté</label>
-            </p>
-        </form>
-    </section>
+  <section class="auth-box">
+    <h2>Authentification</h2>
 
-    <footer>
-        <p>All content copyright &copy; A3.</p>
-        <p><a href="https://www.isen-ouest.yncrea.fr/" target="_blank">Lien vers la page du Programmeur</a></p>
-    </footer>
+    <form action="chat.html" method="get">
+      <div class="auth-grid">
+        <label for="login">Login</label>
+        <input id="login" name="login" type="text" required>
+
+        <label for="mdp">Mot de passe</label>
+        <input id="mdp" name="mdp" type="password" required>
+
+        <div class="full">
+          <label>
+            <input type="checkbox" name="souvenir">
+            Se souvenir de moi
+          </label>
+        </div>
+
+        <div class="full">
+          <button type="submit">Se connecter</button>
+          <button type="reset">Annuler</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; ISEN Yncréa Ouest</p>
+    <p>
+      <a href="https://www.isen-ouest.fr/" target="_blank" rel="noopener">Lien vers la page du Programmeur</a>
+    </p>
+  </footer>
 </body>
 </html>
