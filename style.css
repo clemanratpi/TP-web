@@ -1,23 +1,17 @@
-/* =========================
-   COMMUN AUX 3 PAGES
-   ========================= */
-
 body {
-  text-align: center;                 /* centre le contenu */
-  font-family: Verdana, sans-serif;   /* police générale */
-  background: #EADDC4;                /* fond */
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  background: #EADDC4;
   margin: 0;
 }
 
-/* Centrer le tableau (si tu utilises un tableau dans ton TP1) */
 table {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Titre principal "chat en ligne" */
 h1 {
-  font-size: 2.5em; /* 40px si body=16px */
+  font-size: 2.5em; 
   font-weight: bold;
   font-family: "Marko One", Georgia, serif;
   color: #CC6600;
@@ -26,14 +20,12 @@ h1 {
   text-shadow: 0.2em 0.2em #D3D3D3;
 }
 
-/* Titres des pages (Bienvenue..., Authentification, chat) */
 h2 {
   text-transform: uppercase;
   color: #7A0002;
   letter-spacing: 0.2em;
 }
 
-/* Footer */
 footer {
   background: #783F27;
   color: #EADDC4;
@@ -45,35 +37,32 @@ footer a {
   color: #DC6903;
 }
 
-/* Logo ISEN */
 img {
   width: 100px;
   height: 50px;
 }
 
-/* =========================
-   MENU
-   ========================= */
+/* MENU */
 
 ul {
-  list-style: none;       /* pas de bullets */
-  display: flex;          /* items en flex */
-  margin: 0.5em;          /* marges externes */
+  list-style: none;       
+  display: flex;         
+  margin: 0.5em;       
   padding: 0;
-  background: #783F27;    /* fond du menu */
+  background: #783F27;    
 }
 
 ul li {
   display: block;
-  border: 1px solid #000;      /* l’énoncé impose taille + style + radius ; couleur non précisée */
+  border: 1px solid #000;
   border-style: solid;
   border-radius: 0.5em;
-  padding: 0.5em 1em;          /* top/bottom 0.5em, left/right 1em */
+  padding: 0.5em 1em;          
   margin-right: 0.5em;
 }
 
 ul li a {
-  text-decoration: none;       /* pas de soulignement */
+  text-decoration: none;
   color: #DC6903;
 }
 
@@ -81,7 +70,6 @@ ul li a:hover {
   color: #F9AB33;
 }
 
-/* Item actif selon la page */
 #page-accueil .nav-accueil {
   background: #EADDC4;
 }
@@ -91,11 +79,8 @@ ul li a:hover {
   background: #EADDC4;
 }
 
-/* =========================
-   PAGE authentification.html
-   ========================= */
+/* PAGE authentification.html */
 
-/* Cadre autour du contenu (mets-le sur un conteneur, ex: <main class="cadre"> ... ) */
 .cadre {
   border: 4px double #783F27;
   border-radius: 25px;
@@ -103,7 +88,6 @@ ul li a:hover {
   padding: 1em;
 }
 
-/* Champs texte login/mdp (mets class="text-input" sur tes <input type="text/password">) */
 .text-input {
   border-radius: 8px;
   font-size: 18px;
@@ -113,7 +97,6 @@ ul li a:hover {
   padding-right: 20px;
 }
 
-/* Boutons (mets class="btn" sur tes <input type="submit/reset"> ou <button>) */
 .btn {
   background: #783F27;
   border: none;
@@ -124,26 +107,20 @@ ul li a:hover {
   cursor: grab;
 }
 
-/* Checkbox */
 input[type="checkbox"] {
   width: 1.15em;
   height: 1.15em;
 }
 
-/* Grid “contenu ci-dessous” (mets class="auth-grid" sur le bloc demandé par la question 16) */
 .auth-grid {
   display: grid;
-  /* adapte les zones selon ton HTML (labels, inputs, checkbox, boutons) */
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 1em;
   align-items: center;
 }
 
-/* =========================
-   PAGE chat.html
-   ========================= */
+/* PAGE chat.html */
 
-/* Cadre chat : même style que .cadre */
 .chat-cadre {
   border: 4px double #783F27;
   border-radius: 25px;
@@ -151,7 +128,6 @@ input[type="checkbox"] {
   padding: 1em;
 }
 
-/* Menu déroulant */
 select {
   width: 190px;
   height: 30px;
@@ -161,7 +137,6 @@ select {
   box-shadow: 4px 4px #d2cece;
 }
 
-/* Champs texte “Rafraîchissement” + “Message” : même style */
 .chat-input {
   border-radius: 8px;
   font-size: 18px;
@@ -171,14 +146,12 @@ select {
   padding-right: 20px;
 }
 
-/* Grand champ de texte (zone messages) */
 .big-text {
   border-style: dotted;
   cursor: not-allowed;
   background: #ded1c5;
 }
 
-/* Boutons chat : même style */
 .chat-btn {
   background: #783F27;
   border: none;
@@ -189,11 +162,9 @@ select {
   cursor: grab;
 }
 
-/* Grid du formulaire chat (question 22) */
 .chat-form-grid {
   display: grid;
   grid-row-gap: 1em;
-  /* à adapter selon ton HTML exact */
   grid-template-columns: 1fr 2fr;
   align-items: center;
 }
